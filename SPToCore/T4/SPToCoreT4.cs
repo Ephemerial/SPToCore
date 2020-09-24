@@ -18,7 +18,7 @@ namespace SPToCore.T4
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+    #line 1 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "16.0.0.0")]
     public partial class SPToCoreT4 : SPToCoreT4Base
     {
@@ -32,42 +32,42 @@ namespace SPToCore.T4
                     "soft.Data.SqlClient;\r\nusing System.Threading.Tasks;\r\nusing Microsoft.EntityFrame" +
                     "workCore;\r\n\r\nnamespace ");
             
-            #line 13 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 13 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Namespace));
             
             #line default
             #line hidden
             this.Write("\r\n{\r\n    public partial class ");
             
-            #line 15 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 15 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(SourceDbContext));
             
             #line default
             #line hidden
             this.Write(" : DbContext\r\n    {\r\n");
             
-            #line 17 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 17 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var sp in SpList){ if (sp.Results.Count > 0) {
             
             #line default
             #line hidden
             this.Write("        private DbSet<");
             
-            #line 18 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 18 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Result> ");
             
-            #line 18 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 18 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 19 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 19 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  }}
             
             #line default
@@ -75,244 +75,244 @@ namespace SPToCore.T4
             this.Write("       \r\n        partial void OnModelCreatingPartial(ModelBuilder modelBuilder)\r\n" +
                     "        {            \r\n            // No key            \r\n");
             
-            #line 24 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 24 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
     foreach (var sp in SpList){ if (sp.Results.Count > 0){
             
             #line default
             #line hidden
             this.Write("            modelBuilder.Entity<");
             
-            #line 25 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 25 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Result>().HasNoKey();\r\n");
             
-            #line 26 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 26 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
     }}
             
             #line default
             #line hidden
             this.Write("        }\r\n\r\n");
             
-            #line 29 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 29 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var sp in SpList){ 
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.GetMethodDefinitionAsync()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.Order == "1" ? "" : "," )));
             
             #line default
             #line hidden
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.isOutput ? "ref " : "" )));
             
             #line default
             #line hidden
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             
-            #line 30 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 30 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write(")\r\n        {\r\n");
             
-            #line 32 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 32 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Results.Count > 0){
             
             #line default
             #line hidden
             this.Write("            //Initialize Result \r\n            List<");
             
-            #line 34 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 34 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Result> lst = new List<");
             
-            #line 34 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 34 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Result>();\r\n");
             
-            #line 35 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 35 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 37 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 37 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Params.Count > 0) {
             
             #line default
             #line hidden
             this.Write("                // Parameters\r\n");
             
-            #line 39 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 39 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             this.Write("                SqlParameter p_");
             
-            #line 40 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 40 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(" = new SqlParameter(\"@");
             
-            #line 40 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 40 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write("\", ");
             
-            #line 40 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 40 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(" ?? (object)DBNull.Value);\r\n                p_");
             
-            #line 41 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 41 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(".Direction = ParameterDirection.");
             
-            #line 41 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 41 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.isOutput ? "Output" : "Input")));
             
             #line default
             #line hidden
             this.Write(";\r\n                p_");
             
-            #line 42 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 42 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(".DbType = DbType.");
             
-            #line 42 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 42 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.DbType));
             
             #line default
             #line hidden
             this.Write(";\r\n                p_");
             
-            #line 43 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 43 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(".Size = ");
             
-            #line 43 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 43 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Length));
             
             #line default
             #line hidden
             this.Write(";\r\n\r\n");
             
-            #line 45 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 45 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  }
             
             #line default
             #line hidden
             
-            #line 45 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 45 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("\r\n                // Processing \r\n                string sqlQuery = $@\"EXEC [");
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Schema));
             
             #line default
             #line hidden
             this.Write("].[");
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("] ");
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.Order == "1" ? "" : ", " )));
             
             #line default
             #line hidden
             this.Write("@");
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.isOutput ? " OUTPUT" : "" )));
             
             #line default
             #line hidden
             
-            #line 48 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 48 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("\";\r\n");
             
-            #line 49 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 49 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Results.Count > 0) {
             
             #line default
@@ -320,41 +320,41 @@ if (sp.Results.Count > 0) {
             this.Write("                \r\n                //Output Data\r\n                lst = await this" +
                     ".");
             
-            #line 52 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 52 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write(".FromSqlRaw(sqlQuery ");
             
-            #line 52 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 52 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             this.Write(", p_");
             
-            #line 52 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 52 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 52 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 52 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write(").ToListAsync();");
             
-            #line 52 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 52 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             
-            #line 53 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 53 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
         else{
             
             #line default
@@ -362,242 +362,242 @@ if (sp.Results.Count > 0) {
             this.Write("                //Execution\r\n                this.Database.ExecuteSqlRaw(sqlQuery" +
                     " ");
             
-            #line 55 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 55 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             this.Write(", p_");
             
-            #line 55 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 55 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 55 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 55 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write(");");
             
-            #line 55 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 55 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 57 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 57 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Params.Where(x=> x.isOutput).Count() > 0) {
             
             #line default
             #line hidden
             this.Write("                \r\n                //Output Params\r\n");
             
-            #line 60 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 60 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params.Where(x=> x.isOutput)){ 
             
             #line default
             #line hidden
             this.Write("                ");
             
-            #line 60 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 60 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(" = (");
             
-            #line 60 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 60 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Type));
             
             #line default
             #line hidden
             this.Write(")p_");
             
-            #line 60 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 60 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             this.Write(".Value;\r\n");
             
-            #line 61 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 61 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             
-            #line 62 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 62 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("\r\n            //Return\r\n");
             
-            #line 65 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 65 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Results.Count > 0) {
             
             #line default
             #line hidden
             this.Write("            return lst;\r\n");
             
-            #line 67 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 67 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write("        }\r\n\r\n");
             
-            #line 70 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 70 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 if (sp.Results.Count > 0) {
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.GetMethodDefinitionSync()));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.Order == "1" ? "" : "," )));
             
             #line default
             #line hidden
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.isOutput ? "ref " : "" )));
             
             #line default
             #line hidden
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             
-            #line 71 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 71 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write(")\r\n        {\r\n           return ");
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Async(");
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var p in sp.Params){ 
             
             #line default
             #line hidden
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.Order == "1" ? "" : "," )));
             
             #line default
             #line hidden
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture((p.isOutput ? "ref " : "" )));
             
             #line default
             #line hidden
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(p.Param));
             
             #line default
             #line hidden
             
-            #line 73 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 73 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             this.Write(").Result;\r\n        }\r\n");
             
-            #line 75 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 75 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
 }
             
             #line default
             #line hidden
             
-            #line 76 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 76 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  }
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 78 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 78 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var sp in SpList){ if (sp.Results.Count > 0){
             
             #line default
             #line hidden
             this.Write("        public class ");
             
-            #line 79 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 79 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(sp.Name));
             
             #line default
             #line hidden
             this.Write("Result\r\n        {\r\n");
             
-            #line 81 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 81 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  foreach (var r in sp.Results){
             
             #line default
             #line hidden
             this.Write("            public ");
             
-            #line 82 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 82 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(r.Type));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 82 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 82 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(r.Name));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n");
             
-            #line 83 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 83 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  }
             
             #line default
             #line hidden
             this.Write("        }\r\n\r\n");
             
-            #line 86 "C:\Users\egmku\Source\Repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
+            #line 86 "C:\Users\egmku\source\repos\SPToCore\SPToCore\T4\SPToCoreT4.tt"
  }}
             
             #line default

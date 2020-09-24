@@ -246,19 +246,19 @@ namespace SPToCore
                     Console.WriteLine("SPToCore - ERROR:");
                     if (String.IsNullOrEmpty(cnn))
                     {
-                        Console.WriteLine("Parameter Missing: connection");
+                        Console.WriteLine("Parameter Missing: connection (-cnn \"<connectionstring>\")");
                     }
                     if (String.IsNullOrEmpty(sch))
                     {
-                        Console.WriteLine("Parameter Missing: schema");
+                        Console.WriteLine("Parameter Missing: schema (-sch )");
                     }
                     if (String.IsNullOrEmpty(nsp))
                     {
-                        Console.WriteLine("Parameter Missing: namespace");
+                        Console.WriteLine("Parameter Missing: namespace in which your main partial dbcontext is created");
                     }
                     if (String.IsNullOrEmpty(ctx))
                     {
-                        Console.WriteLine("Parameter Missing: context");
+                        Console.WriteLine("Parameter Missing: context name of your existing partial DBContext");
                     }
                     if (String.IsNullOrEmpty(sf))
                     {
