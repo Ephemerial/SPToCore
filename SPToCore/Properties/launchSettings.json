@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SPToCore": {
+      "commandName": "Project",
+      "commandLineArgs": "scan -cnn \"Server=localhost;Database=WideWorldImporters;Trusted_Connection=True;\" -sch dbo -nsp WWI_Web.WWIDataModel -ctx WideWorldImportersContext -sf Model -pf C:\\Temp\\ -rtn Outstandings"
+    }
+  }
+}
